@@ -6,9 +6,6 @@ import { render } from "@react-email/components";
 import nodemailer from "nodemailer";
 
 export const sendMail = async (formData) => {
-  console.log(formData.get("email"));
-  console.log(formData.get("message"));
-
   const email = formData.get("email");
   const message = formData.get("message");
 
@@ -39,9 +36,6 @@ export const sendMail = async (formData) => {
     },
   });
 
-  console.log(process.env.MAIL_USER);
-  console.log(process.env.MAIL_KEY);
-
   const mailData = {
     from: email,
     to: "devbyjacobs@gmail.com",
@@ -50,23 +44,17 @@ export const sendMail = async (formData) => {
   };
 
   try {
-    const mailRes = await new Promise((resolve, reject) => {
+    await new Promise((resolve, reject) => {
       transporter.sendMail(mailData, (err, info) => {
         if (err) {
-          console.log("Promise error______________________");
-
           console.error(err);
           reject(err);
         } else {
-          console.log("Promise info______________________");
           console.log(info);
           resolve(info);
         }
       });
     });
-
-    console.log("Mail res______________________");
-    console.log(mailRes);
 
     return { success: true, message: "Message sent successfully" };
   } catch (error) {
