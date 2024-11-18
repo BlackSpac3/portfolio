@@ -38,8 +38,8 @@ export const FeedbackMail = ({ email, message }) => {
           </Section>
           <Section style={{ paddingBottom: "20px" }}>
             <Row>
-              <Text style={heading}>Here's what {email} wrote</Text>
-              <Text style={review}>"{message}"</Text>
+              <Text style={heading}>Here&apos;s what {email} wrote</Text>
+              <Text style={review}>&quot;{message}&quot;</Text>
 
               <Text style={{ ...paragraph, paddingBottom: "16px" }}>
                 You can send your feedback to{" "}

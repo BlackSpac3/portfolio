@@ -39,6 +39,7 @@ const ProjectCard = ({ title, description, tags, imageUrl, nodeEnv, link }) => {
                 className="absolute right-4 top-4 z-10 flex size-10 cursor-pointer items-center justify-center rounded-full bg-gradient-to-b from-[#111111] to-[#555555] opacity-100 shadow-lg transition-all hover:scale-[1.2] active:scale-95 sm:opacity-0 sm:group-hover:opacity-100"
               >
                 <Image
+                  alt=""
                   src={nodeEnv === "production" ? playBttnIcon : githubIcon}
                   className="size-6 object-cover opacity-95"
                 />

@@ -56,7 +56,7 @@ const Intro = () => {
           animate={{ opacity: 1, y: 0 }}
           className="text-center text-2xl leading-tight sm:text-3xl"
         >
-          <span className="font-bold">Hello, I'm Jacobs. </span>I'm a{" "}
+          <span className="font-bold">Hello, I&apos;m Jacobs. </span>I&apos;m a{" "}
           <span className="bg-gradient-to-tr from-red-500 via-rose-400 to-indigo-500 bg-clip-text font-bold text-transparent">
             full-stack developer{" "}
           </span>

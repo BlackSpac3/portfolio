@@ -6,6 +6,6 @@ export default function robots() {
         allow: "/",
       },
     ],
-    sitemap: `${process.env.URL}/sitemap.xml`,
+    sitemap: `${process.env.VERCEL_URL}/sitemap.xml`,
   };
 }
