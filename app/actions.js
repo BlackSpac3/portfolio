@@ -46,17 +46,28 @@ export const sendMail = async (formData) => {
     html,
   };
 
-  await new Promise((resolve, reject) => {
-    transporter.sendMail(mailData, (err, info) => {
-      if (err) {
-        console.error(err);
-        reject(err);
-      } else {
-        console.log(info);
-        resolve(info);
-      }
-    });
-  });
+  try {
+    const mailRes = await new Promise((resolve, reject) => {
+      transporter.sendMail(mailData, (err, info) => {
+        if (err) {
+          console.log("Promise error______________________");
 
-  return { success: true, message: "Message sent successfully" };
+          console.error(err);
+          reject(err);
+        } else {
+          console.log("Promise info______________________");
+          console.log(info);
+          resolve(info);
+        }
+      });
+    });
+
+    console.log("Mail res______________________");
+    console.log(mailRes);
+
+    return { success: true, message: "Message sent successfully" };
+  } catch (error) {
+    console.log(error);
+    return { success: false, message: "Something went wrong somewhere" };
+  }
 };
