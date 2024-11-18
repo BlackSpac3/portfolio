@@ -39,6 +39,9 @@ export const sendMail = async (formData) => {
     },
   });
 
+  console.log(process.env.MAIL_USER);
+  console.log(process.env.MAIL_KEY);
+
   const mailData = {
     from: email,
     to: "devbyjacobs@gmail.com",
