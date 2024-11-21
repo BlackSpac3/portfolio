@@ -5,7 +5,6 @@ import {
   Head,
   Hr,
   Html,
-  Img,
   Link,
   Preview,
   Row,
@@ -15,7 +14,7 @@ import {
 import * as React from "react";
 
 export const FeedbackMail = ({ email, message }) => {
-  const previewText = `Read ${email}'s review`;
+  const previewText = `Read ${email.split("@")[0]}'s message`;
 
   return (
     <Html>
@@ -38,7 +37,9 @@ export const FeedbackMail = ({ email, message }) => {
           </Section>
           <Section style={{ paddingBottom: "20px" }}>
             <Row>
-              <Text style={heading}>Here&apos;s what {email} wrote</Text>
+              <Text style={heading}>
+                Here&apos;s what {email.split("@")[0]} wrote
+              </Text>
               <Text style={review}>&quot;{message}&quot;</Text>
 
               <Text style={{ ...paragraph, paddingBottom: "16px" }}>

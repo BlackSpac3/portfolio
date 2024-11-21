@@ -1,6 +1,7 @@
 "use server";
 
-import FeedbackMail from "@/components/FeedbackMail";
+import AutoReplyMail from "@/components/mails/AutoReplyMail";
+import FeedbackMail from "@/components/mails/FeedbackMail";
 import { emailRegex, validateString } from "@/lib/utils";
 import { render } from "@react-email/components";
 import nodemailer from "nodemailer";
@@ -24,6 +25,7 @@ export const sendMail = async (formData) => {
   }
 
   const html = await render(<FeedbackMail email={email} message={message} />);
+  const autoReplyHtml = await render(<AutoReplyMail email={email} />);
 
   const transporter = nodemailer.createTransport({
     service: "Gmail",
@@ -37,15 +39,34 @@ export const sendMail = async (formData) => {
   });
 
   const mailData = {
-    from: email,
+    from: `${email.split("@")[0]} <${email}>`,
     to: "devbyjacobs@gmail.com",
     subject: `Message from ${email}`,
     html,
   };
 
+  const autoReplyMailData = {
+    from: "Jacobs Development <devbyjacobs@gmail.com>",
+    to: email,
+    subject: `Automatic Reply`,
+    html: autoReplyHtml,
+  };
+
   try {
     await new Promise((resolve, reject) => {
       transporter.sendMail(mailData, (err, info) => {
+        if (err) {
+          console.error(err);
+          reject(err);
+        } else {
+          console.log(info);
+          resolve(info);
+        }
+      });
+    });
+
+    await new Promise((resolve, reject) => {
+      transporter.sendMail(autoReplyMailData, (err, info) => {
         if (err) {
           console.error(err);
           reject(err);

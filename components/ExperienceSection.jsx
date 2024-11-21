@@ -33,6 +33,7 @@ const ExperienceCard = ({ experience, cardStyle }) => {
         background: cardStyle.iconBg,
         borderColor: "#ffeeee",
         boxShadow: `0 0 0 4px ${cardStyle.borderColor}`,
+        userSelect: "none",
       }}
       icon={
         <div className="flex h-full w-full items-center justify-center">
