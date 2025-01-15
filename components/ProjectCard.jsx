@@ -62,7 +62,7 @@ const ProjectCard = ({ title, description, tags, imageUrl, nodeEnv, link }) => {
         </div>
 
         <div className="w-full p-4 sm:w-[50%] sm:px-8 sm:py-10">
-          <h3 className="text-2xl font-semibold">{title}</h3>
+          <h3 className="w-[80%] font-semibold md:text-2xl">{title}</h3>
           <p className="body-text mt-2 leading-relaxed">{description}</p>
           <ul className="mt-5 flex flex-wrap gap-2 sm:mt-10">
             {tags.map((tag, index) => (
