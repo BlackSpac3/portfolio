@@ -6,6 +6,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ActiveSectionProvider from "@/context/ActiveSectionProvider";
 import { Toaster } from "@/components/ui/toaster";
+import { Analytics } from "@vercel/analytics/next";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -48,6 +49,7 @@ export default function RootLayout({ children }) {
             <Footer />
           </ActiveSectionProvider>
         </AppThemeProvider>
+        <Analytics />
       </body>
     </html>
   );
