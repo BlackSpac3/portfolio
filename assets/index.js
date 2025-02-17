@@ -6,10 +6,12 @@ import wfDinner_preview from "./site-preview/whats-for-dinner-site-preview.png";
 import ctSite_preview from "./site-preview/CTCL-Site-Snapshot.png";
 import olushodimu_preview from "./site-preview/Olushodimu-Site-Snapshot.png";
 // import ctSite_preview from "./site-preview/ct-site-preview.png";
+import abinitio_preview from "./site-preview/abinitio-energy-site-preview.png";
 import githubIcon from "./github.png";
 import playBttnIcon from "./play-button.png";
 
 export {
+  abinitio_preview,
   myPicture,
   cardinaltorchIMG,
   EWA_logo,
