@@ -90,7 +90,7 @@ const Intro = () => {
         <motion.a
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
-          href="/oluwatoyin-jacobs-resume.pdf"
+          href="/oluwatoyin-jacobs-CV2025.pdf"
           download={true}
         >
           <Button variant="outline">
