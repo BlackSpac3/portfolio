@@ -56,11 +56,11 @@ const Intro = () => {
           animate={{ opacity: 1, y: 0 }}
           className="text-center text-2xl leading-tight sm:text-3xl"
         >
-          <span className="font-bold">Hello, I&apos;m Jacobs. </span>I&apos;m a{" "}
+          <span className="font-bold">Hello, I&apos;m Jacobs, </span>a{" "}
           <span className="bg-gradient-to-tr from-red-500 via-rose-400 to-indigo-500 bg-clip-text font-bold text-transparent">
             full-stack developer{" "}
           </span>
-          with over <span className="font-bold">4 years </span>
+          with over <span className="font-bold">5 years </span>
           of experience. I enjoy building sites & apps. My focus is React
           (Next.js).
         </motion.p>
@@ -90,7 +90,7 @@ const Intro = () => {
         <motion.a
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
-          href="/oluwatoyin-jacobs-CV2025.pdf"
+          href="/Oluwatoyin-Jacobs-Resume.pdf"
           download={true}
         >
           <Button variant="outline">
