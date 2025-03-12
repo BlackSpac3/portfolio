@@ -24,7 +24,7 @@ const geistMono = localFont({
 export const metadata = {
   title: "Toyin Jacobs - Portfolio",
   description:
-    "With over three years of experience specialized in writing efficient programs and developing stunning, functional, and dynamic websites, I’ve gained a vast number of skills and expertise with various software and web development technologies.",
+    "With over five years of experience specialized in writing efficient programs and developing stunning, functional, and dynamic websites, I’ve gained a vast number of skills and expertise with various software and web development technologies.",
   twitter: {
     card: "summary_large_image",
   },
